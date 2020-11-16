@@ -50,6 +50,10 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+#    - assets/images/bread.jpg
+#    - assets/images/grilled.jpg
+#    - assets/images/onion.jpg
+#    - assets/images/Lettuce.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

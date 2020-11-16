@@ -3,6 +3,7 @@ import 'package:delivery_app/helper/categories_data.dart';
 import 'package:delivery_app/helper/popular_product_data.dart';
 import 'package:delivery_app/model/categories_model.dart';
 import 'package:delivery_app/model/popular_products_model.dart';
+import 'package:delivery_app/screens/details_screen.dart';
 import 'package:delivery_app/size_config.dart';
 import 'package:delivery_app/widgets/custom_prefix_icon.dart';
 import 'package:delivery_app/widgets/popular_product_card.dart';
@@ -68,11 +69,21 @@ class _HomeState extends State<Home> {
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: products.length,
-                        itemBuilder: (context, index) => PopularProductCard(
-                          img: products[index].img,
-                          title: products[index].title,
-                          desc: products[index].description,
-                          fav: products[index].fav,
+                        itemBuilder: (context, index) => InkWell(
+                          onTap: () {
+                            if (index == 1) {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => DetailsScreen()));
+                            }
+                          },
+                          child: PopularProductCard(
+                            img: products[index].img,
+                            title: products[index].title,
+                            desc: products[index].description,
+                            fav: products[index].fav,
+                          ),
                         ),
                       ),
                     ),
@@ -284,7 +295,7 @@ class LeftPartBNBCustomPainter extends CustomPainter {
     path.lineTo(0, size.height * 0.5);
     path.quadraticBezierTo(0, 0, size.width * 0.2, 0);
     path.close();
-    canvas.drawShadow(path, Colors.black, 5, true);
+    canvas.drawShadow(path, Colors.black, 1, true);
     canvas.drawPath(path, paint);
   }
 
@@ -308,9 +319,9 @@ class RightPartBNBCustomPainter extends CustomPainter {
     path.quadraticBezierTo(
         size.width, size.height, size.width * 0.8, size.height);
     path.lineTo(0, size.height);
-    path.quadraticBezierTo(size.width * 0.3, size.height * 0.5, 0, 0);
+    path.quadraticBezierTo(size.width * 0.2, size.height * 0.5, 0, 0);
     path.close();
-    canvas.drawShadow(path, Colors.black, 5, true);
+    canvas.drawShadow(path, Colors.black, 1, true);
     canvas.drawPath(path, paint);
   }
 

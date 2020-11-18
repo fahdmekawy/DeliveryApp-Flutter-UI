@@ -295,7 +295,7 @@ class LeftPartBNBCustomPainter extends CustomPainter {
     path.lineTo(0, size.height * 0.5);
     path.quadraticBezierTo(0, 0, size.width * 0.2, 0);
     path.close();
-    canvas.drawShadow(path, Colors.black, 1, true);
+    canvas.drawShadow(path, Colors.black, 0.25, true);
     canvas.drawPath(path, paint);
   }
 
@@ -321,7 +321,7 @@ class RightPartBNBCustomPainter extends CustomPainter {
     path.lineTo(0, size.height);
     path.quadraticBezierTo(size.width * 0.2, size.height * 0.5, 0, 0);
     path.close();
-    canvas.drawShadow(path, Colors.black, 1, true);
+    canvas.drawShadow(path, Colors.black, 0.25, true);
     canvas.drawPath(path, paint);
   }
 

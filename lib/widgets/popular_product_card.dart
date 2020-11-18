@@ -45,15 +45,16 @@ class PopularProductCard extends StatelessWidget {
                       height: 120,
                       width: 120,
                       decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                                offset: Offset(0, 0),
-                                blurRadius: 5,
-                                spreadRadius: 5,
-                                color: Colors.blue.withOpacity(0.3))
-                          ]),
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                              offset: Offset(0, 0),
+                              blurRadius: 5,
+                              spreadRadius: 5,
+                              color: Colors.blue.withOpacity(0.3))
+                        ],
+                      ),
                       child: Center(
                           child: SvgPicture.asset(
                         img,
@@ -103,15 +104,16 @@ class PopularProductCard extends StatelessWidget {
                 width: 40,
                 height: 40,
                 decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                          offset: Offset(0, 0),
-                          blurRadius: 20,
-                          spreadRadius: -8,
-                          color: Colors.grey)
-                    ]),
+                  shape: BoxShape.circle,
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                        offset: Offset(0, 0),
+                        blurRadius: 20,
+                        spreadRadius: -8,
+                        color: Colors.grey)
+                  ],
+                ),
                 child: Icon(
                   Icons.arrow_forward_ios,
                   color: Colors.black,

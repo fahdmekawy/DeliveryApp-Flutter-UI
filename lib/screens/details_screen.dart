@@ -1,5 +1,6 @@
 import 'package:delivery_app/helper/ingredients_data.dart';
 import 'package:delivery_app/model/ingredients_model.dart';
+import 'package:delivery_app/screens/cart_screen.dart';
 import 'package:delivery_app/widgets/title_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -127,7 +128,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         Row(
                           children: [
                             FlatButton(
-                              onPressed: () {},
+                              onPressed: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => CartScreen())),
                               child: Container(
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
@@ -174,7 +178,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
             ),
           ),
           Positioned(
-            top: 30,
+            top: 40,
             left: 25,
             child: Row(
               children: [
